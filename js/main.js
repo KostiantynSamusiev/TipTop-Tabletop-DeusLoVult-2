@@ -3,10 +3,10 @@ let questionCOntainer = document.querySelectorAll('.top');
 let arrow = document.querySelectorAll('.arrow');
 
 
+
 let burgerMenu = document.querySelector('.burger');
 let navLinks = document.querySelector('.navigation-links');
-console.log(burgerMenu);
-console.log(navLinks);
+
 
 burgerMenu.onclick = () => {
   navLinks.classList.toggle('is-active');
@@ -27,11 +27,14 @@ $('.games_card_container').slick({
   infinite: true,
   centerMode: false,
   variableWidth: true,
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1
 });
 
-
+$(document).on('click', '.main-btn', function(e){
+  $(this).toggleClass('active');
+  $('.btn-cont').toggleClass('active');
+});
 
 
 
