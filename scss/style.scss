@@ -258,12 +258,6 @@ body {
             transform: rotate(0deg) translateY(10px);
         }
 
-        // &:after {
-        //     @include btnIconDef();
-        //     content: '';
-        //     backface-visibility: hidden;
-        //     transform: rotate(0deg) translateY(-10px);
-        // }
     }
 
     .main-btn.active .custom-menu-toggle {
@@ -285,11 +279,6 @@ body {
 
 .navigation-links {
     display: none;
-    position: absolute;
-    left: 50%;
-    right: 50%;
-
-
 
     a {
         @include linksStyle();
@@ -297,6 +286,8 @@ body {
     }
 
     ul {
+        position: absolute;
+        width: -webkit-fill-available;
         display: flex;
         justify-content: space-evenly;
     }
