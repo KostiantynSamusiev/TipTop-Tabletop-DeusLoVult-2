@@ -285,10 +285,15 @@ body {
 
 .navigation-links {
     display: none;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+
+
 
     a {
         @include linksStyle();
-        padding: 15px 5px;
+        padding: 30px 30px;
     }
 
     ul {
@@ -728,6 +733,14 @@ section {
             top: -10px;
         }
 
+
+
+    }
+
+    .navigation-links {
+        a {
+            padding: 30px 80px;
+        }
     }
 
     .main_info {
