@@ -6,8 +6,8 @@ $wrapMargin: 0 auto;
     box-sizing: border-box;
 }
 
-$max-img-width: 1200px;
-$max-img-height: 800px;
+$max-img-width: 1601px;
+$max-img-height: 900px;
 
 img {
     max-width: 100%;
@@ -311,6 +311,11 @@ body {
         @include link-btn;
         margin-bottom: 249px;
     }
+
+    a:hover {
+        background: url('../img/hover-btn.svg') 50% no-repeat;
+        ;
+    }
 }
 
 .wraper {
@@ -342,6 +347,7 @@ section {
     }
 
     .game_card {
+        cursor: pointer;
         background-color: rgb(255 255 255 / 15%);
         display: flex;
         flex-direction: column;
@@ -375,6 +381,10 @@ section {
         }
     }
 
+    .game_card:hover {
+        background: rgba(0, 0, 0, 0.1);
+    }
+
 }
 
 
@@ -383,6 +393,10 @@ section {
 
     .games_options_container {
         border-top: 1px solid #000000;
+
+        .game-components {
+            margin-bottom: 35px;
+        }
 
         .top {
             display: flex;
@@ -421,7 +435,9 @@ section {
         }
 
         .top:hover {
-            background: url('../img/04_DloV_1200x1200_\ \(3\).png');
+            cursor: pointer;
+            background: url('../img/DloV_07_1200x628_\ \(7\)2.png');
+
         }
 
         .game {
@@ -443,7 +459,8 @@ section {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    opacity: 0;
+                    width: 100%;
+                    opacity: 1;
                     transition: opacity 0.3s ease-in-out;
                 }
 
@@ -485,9 +502,8 @@ section {
             div {
                 text-align: center;
                 border-right: 1px solid #000000;
-                width: 30%;
-                padding-right: 27px;
-                padding-left: 27px;
+                width: 33%;
+                padding: 5px 0 5px 0;
             }
 
             div:first-child {
@@ -575,6 +591,11 @@ section {
     .games_card_container {
         margin-bottom: 190px;
 
+        a {
+            text-decoration: none;
+            color: black
+        }
+
         .game_card {
             background-color: rgb(255 255 255 / 15%);
             display: flex;
@@ -607,6 +628,10 @@ section {
                 margin: 0 15px;
                 margin-bottom: 12px;
             }
+        }
+
+        .game_card:hover {
+            background: rgba(0, 0, 0, 0.1);
         }
 
         .slick-next {
@@ -808,11 +833,15 @@ section {
     .games {
         .games_options_container {
 
+            .game-components {
+                margin-bottom: 55px;
+            }
+
             .top {
 
 
                 .logo {
-                    margin-right: 35px;
+                    margin-right: 125px;
 
                     img {
                         height: 100px;
@@ -827,13 +856,25 @@ section {
                 }
 
                 .number {
-                    margin-right: 35px;
+                    margin-right: 75px;
+                }
+
+                .arrow {
+                    img {
+                        height: 32px;
+                    }
+
+                }
+
+                .game-about {
+                    display: none;
                 }
             }
 
             .game {
+
                 a {
-                    width: 25%;
+                    width: 335px;
                 }
 
                 .gallery {
@@ -875,6 +916,7 @@ section {
             margin-bottom: 250px;
 
             .game_card {
+
                 width: 335px;
 
 
@@ -903,6 +945,8 @@ section {
 
                 }
             }
+
+
 
             .slick-next::before,
             .slick-prev::before {
@@ -1014,7 +1058,7 @@ section {
     }
 
     .main_info {
-        background: url(../img/headerBackground.png) 20% 35%/110% no-repeat;
+        background: url(../img/headerBackground.png) 50% 50%/cover no-repeat;
         padding-bottom: 110px;
         margin-bottom: 110px;
 
@@ -1056,6 +1100,25 @@ section {
         }
     }
 
+    .games {
+        .games_options_container {
+            .top {
+                .game-about {
+                    display: block;
+                    font-family: "'Almendra-Regular'";
+                    text-transform: none;
+                    font-size: 16px;
+                    line-height: 21px;
+                    width: 40%;
+                }
+
+                .game_name {
+                    margin-right: auto;
+                }
+            }
+        }
+    }
+
 
 
     .game_deusLoVult {
@@ -1085,7 +1148,17 @@ section {
     .recomended {
         .games_card_container {
             .game_card {
-                width: 235px;
+                width: 335px;
+            }
+
+            .slick-next:hover,
+            .slick-prev:hover {
+                transform: scale(1.2);
+                transition: 0.2s;
+            }
+
+            .slick-prev:hover {
+                transform: rotate(-180deg) scale(1.2);
             }
         }
     }
